@@ -1,0 +1,30 @@
+{
+  "name": "ts-twitch-bot",
+  "version": "1.0.0",
+  "description": "Node Twitch Bot with TypeScript | Learn how to create your own custom bot on Twitch!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc",
+    "start": "npm run-script build && node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristianPayne/ts-twitch-bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChristianPayne/ts-twitch-bot/issues"
+  },
+  "homepage": "https://github.com/ChristianPayne/ts-twitch-bot#readme",
+  "dependencies": {
+    "comfy.js": "^1.1.12",
+    "typescript": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^16.9.2",
+    "@types/tmi.js": "^1.7.2"
+  }
+}
