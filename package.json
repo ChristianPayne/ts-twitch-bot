@@ -19,11 +19,12 @@
   },
   "homepage": "https://github.com/ChristianPayne/ts-twitch-bot#readme",
   "dependencies": {
-    "comfy.js": "^1.1.12"
+    "comfy.js": "^1.1.12",
+    "dotenv": "^10.0.0"
   },
   "devDependencies": {
-    "typescript": "^4.4.3",
     "@types/node": "^16.9.2",
-    "@types/tmi.js": "^1.7.2"
+    "@types/tmi.js": "^1.7.2",
+    "typescript": "^4.4.3"
   }
 }

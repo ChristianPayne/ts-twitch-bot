@@ -1,3 +1,4 @@
+require('dotenv').config();
 // Import the types from comfy.js package.
 import {
   ComfyJSInstance
@@ -7,7 +8,9 @@ import {
 const ComfyJS : ComfyJSInstance = require('comfy.js');
 
 // Set what channel you want to connect to.
-const twitchChannel = 'chrisgriffin522';
+const twitchChannel = process.env.CHANNEL ?? "";
+// Set what your OAuth is for connecting.
+const twitchOAuth = process.env.OAUTH ?? "";
 
 ComfyJS.onChat = ( user, message, flags, self ) => {
   if ( self ) return;
@@ -18,8 +21,9 @@ ComfyJS.onChat = ( user, message, flags, self ) => {
 ComfyJS.onCommand = ( user, command, message, flags, extra ) => {
   if( command === "test" ) {
     console.log( "!test was typed in chat" );
+    ComfyJS.Say( "Hello there.", twitchChannel );
   }
 }
 
 // Start the bot.
-ComfyJS.Init( twitchChannel );
+ComfyJS.Init( twitchChannel, twitchOAuth );
